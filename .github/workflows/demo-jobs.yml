@@ -1,0 +1,17 @@
+name: Demo Jobs Vert et Rouge
+
+on:
+  workflow_dispatch:  # permet de lancer manuellement
+
+jobs:
+  job_vert:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Step qui réussit
+        run: echo "Job vert réussi !"
+
+  job_rouge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Step qui échoue
+        run: exit 1
